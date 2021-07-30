@@ -1,10 +1,10 @@
 # Pass Station
 
 [![Gem Version](https://badge.fury.io/rb/pass-station.svg)](https://badge.fury.io/rb/pass-station)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/sec-it/pass-station)
-[![GitHub forks](https://img.shields.io/github/forks/sec-it/pass-station)](https://github.com/sec-it/pass-station/network)
-[![GitHub stars](https://img.shields.io/github/stars/sec-it/pass-station)](https://github.com/sec-it/pass-station/stargazers)
-[![GitHub license](https://img.shields.io/github/license/sec-it/pass-station)](https://github.com/sec-it/pass-station/blob/master/LICENSE)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/noraj/pass-station)
+[![GitHub forks](https://img.shields.io/github/forks/noraj/pass-station)](https://github.com/noraj/pass-station/network)
+[![GitHub stars](https://img.shields.io/github/stars/noraj/pass-station)](https://github.com/noraj/pass-station/stargazers)
+[![GitHub license](https://img.shields.io/github/license/noraj/pass-station)](https://github.com/noraj/pass-station/blob/master/LICENSE)
 [![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat.svg)](https://inventory.rawsec.ml/tools.html#Pass%20Station)
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/pass-station.svg)](https://repology.org/project/pass-station/versions)
@@ -33,12 +33,12 @@
 $ gem install pass-station
 ```
 
-Check the [installation](https://sec-it.github.io/pass-station/) page on the documentation to discover more methods.
+Check the [installation](https://noraj.github.io/pass-station/) page on the documentation to discover more methods.
 
 ## Documentation
 
-Homepage / Documentation: https://sec-it.github.io/pass-station/
+Homepage / Documentation: https://noraj.github.io/pass-station/
 
 ## Author
 
-Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)), pentester at [SEC-IT](https://sec-it.fr).
+Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)).

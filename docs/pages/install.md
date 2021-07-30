@@ -43,7 +43,7 @@ $ gem install --development pass-station
 Just replace `x.x.x` with the gem version you see after `gem build`.
 
 ```plaintext
-$ git clone https://github.com/sec-it/pass-station.git pass-station
+$ git clone https://github.com/noraj/pass-station.git pass-station
 $ cd pass-station
 $ gem install bundler
 $ bundler install

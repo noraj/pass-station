@@ -15,7 +15,7 @@ $ docsify serve docs
 
 The output directory of the library documentation will be `docs/yard`.
 
-You can consult it online [here](https://sec-it.github.io/pass-station/yard/).
+You can consult it online [here](https://noraj.github.io/pass-station/yard/).
 
 ⚠ Private and protected methods are not displayed properly: https://github.com/lsegal/yard/issues/1372
 

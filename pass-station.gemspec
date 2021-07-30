@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description   = 'CLI & library to search for default credentials among thousands of Products / Vendors'
   s.authors       = ['Alexandre ZANNI']
   s.email         = 'alexandre.zanni@engineer.com'
-  s.homepage      = 'https://sec-it.github.io/pass-station/'
+  s.homepage      = 'https://noraj.github.io/pass-station/'
   s.license       = 'MIT'
 
   s.files         = Dir['bin/*'] + Dir['lib/**/*.rb'] + Dir['data/*.csv']
@@ -21,11 +21,11 @@ Gem::Specification.new do |s|
 
   s.metadata = {
     'yard.run'          => 'yard',
-    'bug_tracker_uri'   => 'https://github.com/sec-it/pass-station/issues',
-    'changelog_uri'     => 'https://github.com/sec-it/pass-station/blob/master/docs/CHANGELOG.md',
-    'documentation_uri' => 'https://sec-it.github.io/pass-station/yard/',
-    'homepage_uri'      => 'https://sec-it.github.io/pass-station/',
-    'source_code_uri'   => 'https://github.com/sec-it/pass-station/'
+    'bug_tracker_uri'   => 'https://github.com/noraj/pass-station/issues',
+    'changelog_uri'     => 'https://github.com/noraj/pass-station/blob/master/docs/CHANGELOG.md',
+    'documentation_uri' => 'https://noraj.github.io/pass-station/yard/',
+    'homepage_uri'      => 'https://noraj.github.io/pass-station/',
+    'source_code_uri'   => 'https://github.com/noraj/pass-station/'
   }
 
   s.required_ruby_version = ['>= 2.6.0', '< 3.1']

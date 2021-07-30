@@ -35,7 +35,7 @@ Legend:
 
 | Tool                          | Last commit date                                                                                                    |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [Pass Station][0]             | ![GitHub last commit](https://img.shields.io/github/last-commit/sec-it/pass-station?style=flat-square)              |
+| [Pass Station][0]             | ![GitHub last commit](https://img.shields.io/github/last-commit/noraj/pass-station?style=flat-square)              |
 | [Passhunt][1]                 | ![GitHub last commit](https://img.shields.io/github/last-commit/Viralmaniar/Passhunt?style=flat-square)             |
 | [DefaultCreds-cheat-sheet][2] | ![GitHub last commit](https://img.shields.io/github/last-commit/ihebski/DefaultCreds-cheat-sheet?style=flat-square) |
 
@@ -63,7 +63,7 @@ Legend:
 | [Passhunt][1]                 | ❌       | ❌     | ❌        | ❌        | ❌     | ❌          |
 | [DefaultCreds-cheat-sheet][2] | ❌       | ❌     | ❌        | ❌        | ❌     | ❌          |
 
-[0]:https://github.com/sec-it/pass-station/
+[0]:https://github.com/noraj/pass-station/
 [1]:https://github.com/Viralmaniar/Passhunt
 [2]:https://github.com/ihebski/DefaultCreds-cheat-sheet/blob/main/creds
 [3]:https://github.com/ihebski/DefaultCreds-cheat-sheet

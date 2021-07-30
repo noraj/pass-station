@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+Chore:
+
+- Fork: repository move from [sec-it/pass-station](https://github.com/sec-it/pass-station) to [noraj/pass-station](https://github.com/noraj/pass-station)
+
 ## [1.2.2]
 
 - Update database (new entries) to reflect upstream
