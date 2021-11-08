@@ -1503,8 +1503,6 @@ Lanier,supervisor,<blank>
 LANSA,admin,admin
 LANSA,dev,dev
 LANSA,WEBADM,password
-Lantronics,<blank>,access
-Lantronics,<blank>,system
 Lantronix,<blank>,access
 Lantronix,<blank>,admin
 Lantronix,<blank>,<blank>
@@ -1516,6 +1514,7 @@ Lasa AIMS (mssql),ADMIN,AIMS
 Lasa AIMS (mssql),FB,AIMS
 latis network,<blank>,<blank>
 LAXO,admin,admin
+ldap account manager(lam),lam,lam
 Leading Edge,<blank>,MASTER
 Lenel,admin,admin
 Lenel OnGuard (mssql),LENEL,MULTIMEDIA
@@ -1734,9 +1733,6 @@ Netcomm,user,password
 Netcordia,admin,admin
 netcore (ssh),admin,admin
 netcore (ssh),guest,guest
-netgar (ssh),admin,1234
-netgar (ssh),admin,admin
-netgar (ssh),admin,<blank>
 Netgear,admin,1234
 Netgear,admin,admin
 Netgear,admin,<blank>
@@ -1931,6 +1927,7 @@ Nullsoft,admin,changeme
 Nurit,$system,<blank>
 Nuxeo Server (general),Administrator,Administrator
 OCE,<blank>,0 and the number of OCE printer
+OCS Inventory,admin,admin
 Odoo (general),admin,admin
 Odoo (general),demo,demo
 ODS,ods,ods
@@ -2212,7 +2209,6 @@ Oracle,WWWUSER,WWWUSER
 Oracle,WWW,WWW
 Oracle,XPRT,XPRT
 Orange,admin,admin
-orange livebox4  (web),admin,(blank)
 orange livebox4  (web),admin,<blank>
 Orange,root,1234
 Osicom,debug,d.e.b.u.g
@@ -2236,6 +2232,7 @@ ovislink,root,<blank>
 Pacific Micro Data,pmd,<blank>
 Packard Bell,<blank>,bell9
 Packeteer,<blank>,touchpwd=
+Palo Alto GlobalProtect Gateway,admin,admin
 Panasonic,admin,1234
 Panasonic,admin,12345
 Panasonic,<blank>,1234
@@ -2341,6 +2338,7 @@ publicprivate (snmp),<blank>,private
 publicprivate (snmp),<blank>,public
 Pyramid Computer,admin,admin
 Pyramid Computer,admin,gnumpf
+qBittorrent Web UI,admin,adminadmin
 QDI,<blank>,lesarotl
 QDI,<blank>,password
 QDI,<blank>,QDI
@@ -2355,6 +2353,7 @@ Questra Corporation,guest,guest
 Questra Corporation,questra,questra
 Quest Software,TOAD,TOAD
 Quintum Technologies Inc.,admin,admin
+RabbitMQ,guest,guest
 Radio Shack,<blank>,744
 Radio Shack,[MULTIPLE],744
 Radvision,admin,<blank>
@@ -2397,7 +2396,6 @@ Research,<blank>,Col2ogro2
 Research Machines,manager,changeme
 Resumix,root,resumix
 Ricoh,admin,<blank>
-Ricoh,admin,no password
 Ricoh,admin,password
 Ricoh,<blank>,password
 Ricoh,<blank>,sysadm
@@ -2749,7 +2747,6 @@ SolarWinds,whd,whd
 Solution 6,aaa,often blank
 Solwise,root,same as webui pwd
 SonarQube (web),admin,admin
-Sonicwall,admin,password
 SonicWALL,admin,password
 Sonic-X,root,admin
 Sonus,admin,Sonus12345

@@ -1,4 +1,8 @@
-## [Unreleased]
+## [1.2.3 - Unreleased]
+
+Credentials:
+
+- Update database (new entries) to reflect upstream
 
 Chore:
 

@@ -10,7 +10,7 @@ module PassStation
   class DB
     UPSTREAM_DATABASE = {
       URL: 'https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv',
-      HASH: '2107f3105bcc1a218a646beac6f92e2e8c639fac1f3f3e4a3da76b3d14a40dc8'
+      HASH: 'f03f3ed77a8a932b1b2891fbec705d42b1eec4911fb76ccf36cde9e79a385556'
     }.freeze
 
     class << self
