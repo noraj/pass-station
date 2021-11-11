@@ -40,5 +40,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake', '~> 13.0')
   s.add_development_dependency('redcarpet', '~> 3.5') # for GMF support in YARD
   s.add_development_dependency('rubocop', '~> 1.10')
+  s.add_development_dependency('webrick', '~> 1.7')
   s.add_development_dependency('yard', '~> 0.9')
 end

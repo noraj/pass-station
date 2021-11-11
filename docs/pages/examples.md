@@ -199,3 +199,76 @@ Edimax,edimax,software01
 Edimax,guest,1234
 Edimax,guest,<blank>
 ```
+
+Search among [many-passwords](https://github.com/many-passwords/many-passwords)
+instead of [DefaultCreds-cheat-sheet](https://github.com/ihebski/DefaultCreds-cheat-sheet).
+
+```plaintext
+$ pass-station search palo --source 2 --output json --no-color | jq
+[
+  {
+    "vendor": "Palo Alto Networks",
+    "modelsoftware_name": "GlobalProtect Gateway",
+    "version": "ANY",
+    "access_type": "HTTP/CLI",
+    "username": "admin",
+    "password": "admin",
+    "privileges": "Administrator",
+    "notes": "https://docs.paloaltonetworks.com/pan-os/9-1/pan-os-admin/getting-started/integrate-the-firewall-into-your-management-network/perform-initial-configuration.html"
+  }
+]
+```
+
+By default it searches in the `productvendor` column for _DefaultCreds-cheat-sheet_
+and in the `vendor` column for _Many passwords_ because searching through all
+columns results in too much false positive.
+To search through non-default columns use the `--field` parameter.
+All available columns can be seen in the [library documentation](https://noraj.github.io/pass-station/yard/PassStation/DB.html).
+`--field all` also allow to search through all columns.
+
+```
+$ pass-station search cli --source 2 --output json --no-color --field access_type | jq
+[
+  {
+    "vendor": "Linux Mint",
+    "modelsoftware_name": "Linux Mint Live session",
+    "version": "20.2",
+    "access_type": "Uma/CLI/Login",
+    "username": "mint",
+    "password": "<blank>",
+    "privileges": "user",
+    "notes": "<blank>"
+  },
+  {
+    "vendor": "MX Linux",
+    "modelsoftware_name": "MX Linux Live Medium",
+    "version": "MX-19.4.1",
+    "access_type": "CLI/Login",
+    "username": "demo",
+    "password": "demo",
+    "privileges": "user",
+    "notes": "<blank>"
+  },
+  {
+    "vendor": "MX Linux",
+    "modelsoftware_name": "MX Linux Live Medium",
+    "version": "MX-19.4.1",
+    "access_type": "CLI/Login",
+    "username": "root",
+    "password": "root",
+    "privileges": "superuser",
+    "notes": "<blank>"
+  },
+  {
+    "vendor": "Nortel",
+    "modelsoftware_name": "Remote Office 9150",
+    "version": "<blank>",
+    "access_type": "Client",
+    "username": "admin",
+    "password": "root",
+    "privileges": "Admin",
+    "notes": "<blank>"
+  },
+  ...
+```
+

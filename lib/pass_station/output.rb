@@ -52,7 +52,7 @@ module PassStation
     end
 
     # Normalize string to be class name compatible
-    # Join splitted words and capitalize
+    # Join split words and capitalize
     # @param formatter [String] formatter name
     # @return [String] normalized name (class compatible)
     def normalize(formatter)
@@ -105,11 +105,10 @@ module PassStation
         # @return [Hash] fixed colsizes, keys are columns name, values are columns size
         def correct_min_colsizes(colsizes)
           min_colsizes = {
-            productvendor: 14,
-            username: 9,
-            password: 9
+            productvendor: 14, username: 9, password: 9, modelsoftware_name: 19,
+            version: 8, access_type: 12, privileges: 11, notes: 6, vendor: 7
           }
-          min_colsizes.each_with_object({}) { |(k, v), h| h[k] = [v, colsizes[k]].max }
+          colsizes.each_with_object({}) { |(k, v), h| h[k] = [v, min_colsizes[k]].max }
         end
 
         # Left justify an element of the column
@@ -220,7 +219,7 @@ module PassStation
         # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
         # @return [Array<String>] the formatted JSON ready to be printed (only
         #   one element on the array, keep an array for compatibility with
-        #   {highlight_found} and homogeneity with other formatters)
+        #   {DB.highlight_found} and homogeneity with other formatters)
         def format(table)
           [table.map(&:to_h).to_json]
         end
@@ -234,7 +233,7 @@ module PassStation
         # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
         # @return [Array<String>] the formatted YAML ready to be printed (only
         #   one element on the array, keep an array for compatibility with
-        #   {highlight_found} and homogeneity with other formatters)
+        #   {DB.highlight_found} and homogeneity with other formatters)
         def format(table)
           [table.map(&:to_h).to_yaml]
         end

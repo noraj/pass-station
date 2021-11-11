@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pass-station (1.2.2)
+    pass-station (1.2.3)
       docopt (~> 0.6)
       paint (~> 2.2)
 
@@ -35,6 +35,7 @@ GEM
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
     unicode-display_width (2.1.0)
+    webrick (1.7.0)
     yard (0.9.26)
 
 PLATFORMS
@@ -50,6 +51,7 @@ DEPENDENCIES
   rake (~> 13.0)
   redcarpet (~> 3.5)
   rubocop (~> 1.10)
+  webrick (~> 1.7)
   yard (~> 0.9)
 
 BUNDLED WITH

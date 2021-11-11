@@ -22,10 +22,11 @@ module PassStation
     end
 
     # Parse, sort and sanitize the password database
-    # @param sort [Symbol] column name to sort by: +:productvendor+, +:username+, +:password+
-    # @return [Array<CSV::Row>] table of +CSV::Row+, each row contains three
-    #   attributes: :productvendor, :username, :password
-    def parse(sort = :productvendor)
+    # @param sort [Symbol] column name to sort by (columns depends on the database source, see {UPSTREAM_DATABASE})
+    # @return [Array<CSV::Row>] table of +CSV::Row+, each row contains multiple
+    #   attributes (columns depends on the database source, see {UPSTREAM_DATABASE})
+    def parse(sort = nil)
+      sort ||= UPSTREAM_DATABASE[@database_type][:COLUMNS].first[0]
       @data = CSV.table(@database_path, **@config).sort_by do |s|
         s[sort].downcase
       end

@@ -25,13 +25,16 @@ module PassStation
     attr_accessor :database_name
 
     # Get the password database in +Array<CSV::Row>+ format
-    # @return [Array<CSV::Row>] pasword database
+    # @return [Array<CSV::Row>] password database
     attr_reader :data
 
     # A new instance of Pass Station
-    def initialize
+    # @param db [Integer] the credentials source database id (see {UPSTREAM_DATABASE})
+    def initialize(db = nil)
+      db ||= 1
       @storage_location = 'data/'
-      @database_name = 'DefaultCreds-Cheat-Sheet.csv'
+      @database_type = UPSTREAM_DATABASE[:MAPPING][db]
+      @database_name = UPSTREAM_DATABASE[@database_type][:FILENAME]
       @database_path = absolute_db_path
       database_exists?
       @config = {}

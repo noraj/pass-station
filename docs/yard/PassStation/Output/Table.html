@@ -546,19 +546,17 @@
 109
 110
 111
-112
-113</pre>
+112</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_correct_min_colsizes'>correct_min_colsizes</span><span class='lparen'>(</span><span class='id identifier rubyid_colsizes'>colsizes</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_min_colsizes'>min_colsizes</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-    <span class='label'>productvendor:</span> <span class='int'>14</span><span class='comma'>,</span>
-    <span class='label'>username:</span> <span class='int'>9</span><span class='comma'>,</span>
-    <span class='label'>password:</span> <span class='int'>9</span>
+    <span class='label'>productvendor:</span> <span class='int'>14</span><span class='comma'>,</span> <span class='label'>username:</span> <span class='int'>9</span><span class='comma'>,</span> <span class='label'>password:</span> <span class='int'>9</span><span class='comma'>,</span> <span class='label'>modelsoftware_name:</span> <span class='int'>19</span><span class='comma'>,</span>
+    <span class='label'>version:</span> <span class='int'>8</span><span class='comma'>,</span> <span class='label'>access_type:</span> <span class='int'>12</span><span class='comma'>,</span> <span class='label'>privileges:</span> <span class='int'>11</span><span class='comma'>,</span> <span class='label'>notes:</span> <span class='int'>6</span><span class='comma'>,</span> <span class='label'>vendor:</span> <span class='int'>7</span>
   <span class='rbrace'>}</span>
-  <span class='id identifier rubyid_min_colsizes'>min_colsizes</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_h'>h</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_colsizes'>colsizes</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_colsizes'>colsizes</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_h'>h</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_min_colsizes'>min_colsizes</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -720,12 +718,12 @@
       <pre class="lines">
 
 
+138
 139
-140
-141</pre>
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 138</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_headers'>headers</span><span class='lparen'>(</span><span class='id identifier rubyid_colsizes'>colsizes</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_colsizes'>colsizes</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -831,12 +829,12 @@
       <pre class="lines">
 
 
+119
 120
-121
-122</pre>
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_justify'>justify</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='comma'>,</span> <span class='id identifier rubyid_column'>column</span><span class='comma'>,</span> <span class='id identifier rubyid_colsizes'>colsizes</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_row'>row</span><span class='lbracket'>[</span><span class='id identifier rubyid_column'>column</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_colsizes'>colsizes</span><span class='lbracket'>[</span><span class='id identifier rubyid_column'>column</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -926,16 +924,16 @@
       <pre class="lines">
 
 
+127
 128
 129
 130
 131
 132
-133
-134</pre>
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/pass_station/output.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_justify_row'>justify_row</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='comma'>,</span> <span class='id identifier rubyid_colsizes'>colsizes</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_out'>out</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
@@ -954,7 +952,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jul 30 12:32:47 2021 by
+  Generated on Thu Nov 11 22:17:30 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.26 (ruby-3.0.2).
 </div>

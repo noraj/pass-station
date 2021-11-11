@@ -1,12 +1,16 @@
-## [1.2.3 - Unreleased]
+## [1.2.3]
 
 Credentials:
 
+- Added [many passwords](https://github.com/many-passwords/many-passwords) source [#14][#14]
+- Code needed for multi-source handling
 - Update database (new entries) to reflect upstream
 
 Chore:
 
 - Fork: repository move from [sec-it/pass-station](https://github.com/sec-it/pass-station) to [noraj/pass-station](https://github.com/noraj/pass-station)
+
+[#14]:https://github.com/noraj/pass-station/issues/14
 
 ## [1.2.2]
 

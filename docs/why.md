@@ -13,6 +13,10 @@ because it's aggregating the entries of several default credentials lists:
 _searchploit for default credentials_ but it was relying on [an online service](https://cirt.net/passwords)
 and was lacking of features as well as being unmaintained.
 
+Since v1.2.3, [Pass Station][0] can search through [Many passwords][4]
+in additions to [DefaultCreds-cheat-sheet][3], which is enriched with access
+type, version, notes, etc.
+
 ## General
 
 | Tool                               | Maintained    | Color | CLI | Library | Lang |
@@ -67,3 +71,4 @@ Legend:
 [1]:https://github.com/Viralmaniar/Passhunt
 [2]:https://github.com/ihebski/DefaultCreds-cheat-sheet/blob/main/creds
 [3]:https://github.com/ihebski/DefaultCreds-cheat-sheet
+[4]:https://github.com/many-passwords/many-passwords

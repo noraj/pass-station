@@ -9,45 +9,82 @@ module PassStation
   # Password database handling
   class DB
     UPSTREAM_DATABASE = {
-      URL: 'https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv',
-      HASH: 'f03f3ed77a8a932b1b2891fbec705d42b1eec4911fb76ccf36cde9e79a385556'
+      MAPPING: {
+        1 => :DEFAULT_CREDENTIALS_CHEAT_SHEET,
+        2 => :MANY_PASSWORDS
+      },
+      DEFAULT_CREDENTIALS_CHEAT_SHEET: {
+        URL: 'https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv',
+        HASH: 'f03f3ed77a8a932b1b2891fbec705d42b1eec4911fb76ccf36cde9e79a385556',
+        FILENAME: 'DefaultCreds-Cheat-Sheet.csv',
+        COLUMNS: {
+          productvendor: 'Product/Vendor',
+          username: 'Username',
+          password: 'Password'
+        }
+      },
+      MANY_PASSWORDS: {
+        URL: 'https://raw.githubusercontent.com/many-passwords/many-passwords/main/passwords.csv',
+        HASH: '293ce4411446c702aeda977b9a446ff42d045d980be0b5287a848b5bd7d39402',
+        FILENAME: 'many-passwords.csv',
+        COLUMNS: {
+          vendor: 'Vendor',
+          modelsoftware_name: 'Model/Software name',
+          version: 'Version',
+          access_type: 'Access Type',
+          username: 'Username',
+          password: 'Password',
+          privileges: 'Privileges',
+          notes: 'Notes'
+        }
+      }
     }.freeze
 
     class << self
       # Download upstream password database
       # @param destination_path [String] the destination path (may
       #   overwrite existing file).
-      # @param opts [Hash] the optional downlaod parameters.
+      # @param opts [Hash] the optional download parameters.
       # @option opts [String] :sha256 the SHA256 hash to check, if the file
       #   already exist and the hash matches then the download will be skipped.
+      # @option opts [String] :source_db id of the source database (see. MAPPING in {UPSTREAM_DATABASE}). Default is 1.
       # @return [String|nil] the saved file path.
       def download_upstream(destination_path, opts = {})
-        download_file(UPSTREAM_DATABASE[:URL], destination_path, opts)
+        opts[:source_db] ||= 1
+        source_db = UPSTREAM_DATABASE[:MAPPING][opts[:source_db]]
+        opts[:filename] = UPSTREAM_DATABASE[source_db][:FILENAME]
+        source_url = UPSTREAM_DATABASE[source_db][:URL]
+        download_file(source_url, destination_path, opts)
       end
 
-      # Chek if an update is available
+      # Check if an update is available
       # @return [Boolean] +true+ if there is, +false+ else.
       def check_for_update
-        file = download_file(UPSTREAM_DATABASE[:URL], Dir.mktmpdir)
-        # Same hash = no update
-        !check_hash(file, UPSTREAM_DATABASE[:HASH])
+        ret_vals = []
+        UPSTREAM_DATABASE[:MAPPING].each do |_k, v|
+          file = download_file(UPSTREAM_DATABASE[v][:URL], Dir.mktmpdir)
+          # Same hash = no update
+          ret_vals << !check_hash(file, UPSTREAM_DATABASE[v][:HASH])
+        end
+        ret_vals.inject(:|) # logical OR, there is an update if at least one entry needs one
       end
 
       # Download a file.
       # @param file_url [String] the URL of the file.
       # @param destination_path [String] the destination path (may
       #   overwrite existing file).
-      # @param opts [Hash] the optional downlaod parameters.
+      # @param opts [Hash] the optional download parameters.
       # @option opts [String] :sha256 the SHA256 hash to check, if the file
       #   already exist and the hash matches then the download will be skipped.
+      # @option opts [String] :filename override upstream filename
       # @return [String|nil] the saved file path.
       def download_file(file_url, destination_path, opts = {})
         opts[:sha256] ||= nil
 
         destination_path += '/' unless destination_path[-1] == '/'
         uri = URI(file_url)
-        filename = uri.path.split('/').last
-        destination_file = destination_path + filename
+        opts[:filename] ||= uri.path.split('/').last
+        destination_file = destination_path + opts[:filename]
         # Verify hash to see if it is the latest
         skip_download = check_hash(destination_file, opts[:sha256])
         write_file(destination_file, fetch_file(uri)) unless skip_download

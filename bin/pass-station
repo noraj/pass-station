@@ -11,11 +11,11 @@ require 'docopt'
 require 'paint'
 
 doc = <<~DOCOPT
-  Pass Station
+  Pass Station v#{PassStation::VERSION}
 
   Usage:
-    pass-station list [--sort <col> --output <format>] [--debug]
-    pass-station search <term> [--field <col> --sort <col> --sensitive --output <format>] [--no-color --debug]
+    pass-station list [--sort <col> --output <format>] [--source <id> --debug]
+    pass-station search <term> [--field <col> --sort <col> --sensitive --output <format>] [--source <id> --no-color --debug]
     pass-station update ([--force] <path> | --check) [--debug]
     pass-station -h | --help
     pass-station --version
@@ -24,10 +24,10 @@ doc = <<~DOCOPT
 
   Output options: can be used with list and search commands
     -o <format>, --output <format>  Output format: JSON, CSV, YAML, table, pretty-table [default: pretty-table]
-    -s <col>, --sort <col>          Sort by column: productvendor | username | password [default: productvendor]
+    -s <col>, --sort <col>          Sort by column (see documentation, columns depends on the database source)
 
   Search options:
-    --field <col>   Search in column: productvendor | username | password | all [default: productvendor]
+    --field <col>   Search in column: column name (see documentation, columns depends on the database source) or all
     --sensitive     Search is case sensitive (case insensitive by default)
 
   Update options: update the password database (replace Pass Station DB with upstream DB, use with care)
@@ -35,10 +35,11 @@ doc = <<~DOCOPT
     -c, --check   Check for possible update
 
   Other options:
-    --no-color  Disable colorized output
-    --debug     Display arguments
-    -h, --help  Show this screen
-    --version   Show version
+    --source <id> Credentials source database: 1 (Default Credentials Cheat Sheet), 2 (Many passwords) [default: 1]
+    --no-color    Disable colorized output
+    --debug       Display arguments
+    -h, --help    Show this screen
+    --version     Show version
 DOCOPT
 
 begin
@@ -47,14 +48,17 @@ begin
   pp args if args['--debug']
   if args['update']
     if args['<path>']
-      opts = {}
-      opts[:sha256] = args['--force'] ? nil : PassStation::DB::UPSTREAM_DATABASE[:HASH]
-      puts '[+] Updating database'
-      path = PassStation::DB.download_upstream(args['<path>'], opts)
-      if path
-        puts "[+] Database updated #{path}"
-      else
-        puts '[+] Database already up to date'
+      PassStation::DB::UPSTREAM_DATABASE[:MAPPING].each do |k, v|
+        opts = {}
+        opts[:sha256] = args['--force'] ? nil : PassStation::DB::UPSTREAM_DATABASE[v][:HASH]
+        puts "[+] Updating database: #{v}"
+        opts[:source_db] = k
+        path = PassStation::DB.download_upstream(args['<path>'], opts)
+        if path
+          puts "[+] Database updated: #{v} (#{path})"
+        else
+          puts "[+] Database #{v} already up to date"
+        end
       end
     elsif args['--check']
       if PassStation::DB.check_for_update
@@ -64,13 +68,16 @@ begin
       end
     end
   elsif args['list']
-    ps = PassStation::DB.new
-    ps.parse(args['--sort'].to_sym)
+    db = args['--source'].nil? ? nil : args['--source'].to_i
+    ps = PassStation::DB.new(db)
+    args['--sort'].nil? ? ps.parse : ps.parse(args['--sort'].to_sym)
     puts ps.output_list(args['--output'])
   elsif args['search']
-    ps = PassStation::DB.new
-    ps.parse(args['--sort'].to_sym)
-    ps.search(args['<term>'], args['--field'].to_sym, sensitive: args['--sensitive'])
+    db = args['--source'].nil? ? nil : args['--source'].to_i
+    ps = PassStation::DB.new(db)
+    args['--sort'].nil? ? ps.parse : ps.parse(args['--sort'].to_sym)
+    field = args['--field'].nil? ? nil : args['--field'].to_sym
+    ps.search(args['<term>'], field, sensitive: args['--sensitive'])
     output = ps.output_search(args['--output'])
     puts '[-] No result' if output.empty?
     puts ps.highlight_found(args['<term>'], output, args['--sensitive'])
