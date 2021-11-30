@@ -16,15 +16,15 @@ module PassStation
   # Password database handling
   class DB
     # Get / set storage location, where will be stored the password database.
-    # @return [String] database storage location. Default to +data/+.
+    # @return [String] database storage location. Default to `data/`.
     attr_accessor :storage_location
 
     # Get / set the password database name
     # @return [String] password database filename. Default to
-    #   +DefaultCreds-Cheat-Sheet.csv+.
+    #   `DefaultCreds-Cheat-Sheet.csv`.
     attr_accessor :database_name
 
-    # Get the password database in +Array<CSV::Row>+ format
+    # Get the password database in `Array<CSV::Row>` format
     # @return [Array<CSV::Row>] password database
     attr_reader :data
 
@@ -52,7 +52,7 @@ module PassStation
     end
 
     # Check if the password database exists
-    # @return [Boolean] +true+ if the file exists
+    # @return [Boolean] `true` if the file exists
     def database_exists?
       exists = File.file?(@database_path)
       raise "Database does not exist: #{@database_path}" unless exists

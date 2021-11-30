@@ -12,7 +12,7 @@ module PassStation
   # Password database handling
   class DB
     # Output the data in the chosen format
-    # @param formatter [String] Engine to use to format the data: +table+, +'pretty-table'+, +JSON+, +CSV+, +YAML+
+    # @param formatter [String] Engine to use to format the data: `table`, `'pretty-table'`, `JSON`, `CSV`, `YAML`
     # @param data [Array<CSV::Row>]
     # @return [Array<String>] formatted output
     def output(formatter, data)
@@ -21,7 +21,7 @@ module PassStation
     end
 
     # Output the data in the chosen format (list command)
-    # @param formatter [String] Engine to use to format the data: +table+, +'pretty-table'+, +JSON+, +CSV+, +YAML+
+    # @param formatter [String] Engine to use to format the data: `table`, `'pretty-table'`, `JSON`, `CSV`, `YAML`
     # @return [Array<String>] formatted output
     def output_list(formatter)
       data_nil?
@@ -29,7 +29,7 @@ module PassStation
     end
 
     # Output the data in the chosen format (search command)
-    # @param formatter [String] Engine to use to format the data: +table+, +'pretty-table'+, +JSON+, +CSV+, +YAML+
+    # @param formatter [String] Engine to use to format the data: `table`, `'pretty-table'`, `JSON`, `CSV`, `YAML`
     # @return [Array<String>] formatted output
     def output_search(formatter)
       return [] if @search_result.empty?
@@ -68,8 +68,8 @@ module PassStation
     # Simple table formatter
     class Table
       class << self
-        # Format the +Array<CSV::Row>+ into a simple table with justified columns
-        # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
+        # Format the `Array<CSV::Row>` into a simple table with justified columns
+        # @param table [Array<CSV::Row>] an `Array<CSV::Row>`
         # @return [Array<String>] the formatted table ready to be printed
         def format(table)
           out = []
@@ -112,7 +112,7 @@ module PassStation
         end
 
         # Left justify an element of the column
-        # @param row [CSV::Row] +CSV::Row+
+        # @param row [CSV::Row] `CSV::Row`
         # @param column [Symbol] the symbol of the column
         # @param colsizes [Hash] hash containing the column size for each column as returned by {colsizes_count}
         # @return [String] the justified element
@@ -121,7 +121,7 @@ module PassStation
         end
 
         # Left justify all elements of the column
-        # @param row [CSV::Row] +CSV::Row+
+        # @param row [CSV::Row] `CSV::Row`
         # @param colsizes [Hash] hash containing the column size for each column as returned by {colsizes_count}
         # @return [String] the justified row
         def justify_row(row, colsizes)
@@ -146,8 +146,8 @@ module PassStation
     # Pretty table with ASCII borders formatter
     class PrettyTable < Table
       class << self
-        # Format the +Array<CSV::Row>+ into a simple table with justified columns
-        # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
+        # Format the `Array<CSV::Row>` into a simple table with justified columns
+        # @param table [Array<CSV::Row>] an `Array<CSV::Row>`
         # @return [Array<String>] the formatted table ready to be printed
         def format(table)
           out = []
@@ -162,7 +162,7 @@ module PassStation
         end
 
         # Left justify an element of the column
-        # @param row [CSV::Row] +CSV::Row+
+        # @param row [CSV::Row] `CSV::Row`
         # @param column [Symbol] the symbol of the column
         # @param colsizes [Hash] hash containing the column size for each column as returned by {colsizes_count}
         # @return [String] the justified element
@@ -171,7 +171,7 @@ module PassStation
         end
 
         # Left justify all elements of the column
-        # @param row [CSV::Row] +CSV::Row+
+        # @param row [CSV::Row] `CSV::Row`
         # @param colsizes [Hash] hash containing the column size for each column as returned by {colsizes_count}
         # @return [String] the justified row
         def justify_row(row, colsizes)
@@ -203,8 +203,8 @@ module PassStation
     # CSV formatter
     class Csv
       class << self
-        # Format the +Array<CSV::Row>+ into a CSV
-        # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
+        # Format the `Array<CSV::Row>` into a CSV
+        # @param table [Array<CSV::Row>] an `Array<CSV::Row>`
         # @return [Array<String>] the formatted CSV ready to be printed
         def format(table)
           CSV::Table.new(table).to_csv.split("\n")
@@ -215,8 +215,8 @@ module PassStation
     # JSON formatter
     class Json
       class << self
-        # Format the +Array<CSV::Row>+ into JSON
-        # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
+        # Format the `Array<CSV::Row>` into JSON
+        # @param table [Array<CSV::Row>] an `Array<CSV::Row>`
         # @return [Array<String>] the formatted JSON ready to be printed (only
         #   one element on the array, keep an array for compatibility with
         #   {DB.highlight_found} and homogeneity with other formatters)
@@ -229,8 +229,8 @@ module PassStation
     # YAML formatter
     class Yaml
       class << self
-        # Format the +Array<CSV::Row>+ into YAML
-        # @param table [Array<CSV::Row>] an +Array<CSV::Row>+
+        # Format the `Array<CSV::Row>` into YAML
+        # @param table [Array<CSV::Row>] an `Array<CSV::Row>`
         # @return [Array<String>] the formatted YAML ready to be printed (only
         #   one element on the array, keep an array for compatibility with
         #   {DB.highlight_found} and homogeneity with other formatters)

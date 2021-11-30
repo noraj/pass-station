@@ -8,8 +8,8 @@ module PassStation
     # @param term [String] the searched term
     # @param col [Symbol] the column to search in: column name (columns depends on the database source, see
     #   {UPSTREAM_DATABASE}) or :all (all columns)
-    # @see build_regexp for +opts+ param description
-    # @return [Array<CSV::Row>] table of +CSV::Row+, each row contains multiple
+    # @see build_regexp for `opts` param description
+    # @return [Array<CSV::Row>] table of `CSV::Row`, each row contains multiple
     #   attributes (columns depends on the database source, see {UPSTREAM_DATABASE})
     def search(term, col, opts = {})
       col ||= UPSTREAM_DATABASE[@database_type][:COLUMNS].first[0]

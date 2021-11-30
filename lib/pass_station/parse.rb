@@ -23,7 +23,7 @@ module PassStation
 
     # Parse, sort and sanitize the password database
     # @param sort [Symbol] column name to sort by (columns depends on the database source, see {UPSTREAM_DATABASE})
-    # @return [Array<CSV::Row>] table of +CSV::Row+, each row contains multiple
+    # @return [Array<CSV::Row>] table of `CSV::Row`, each row contains multiple
     #   attributes (columns depends on the database source, see {UPSTREAM_DATABASE})
     def parse(sort = nil)
       sort ||= UPSTREAM_DATABASE[@database_type][:COLUMNS].first[0]

@@ -58,7 +58,7 @@ module PassStation
       end
 
       # Check if an update is available
-      # @return [Boolean] +true+ if there is, +false+ else.
+      # @return [Boolean] `true` if there is, `false` else.
       def check_for_update
         ret_vals = []
         UPSTREAM_DATABASE[:MAPPING].each do |_k, v|
@@ -93,8 +93,8 @@ module PassStation
       # Check if a file match a SHA256 hash
       # @param file [String] the path of the file.
       # @param hash [String] tha SHA256 hash to check against.
-      # @return [Boolean] if the hash of the file matched the one provided (+true+)
-      #   or not (+false+).
+      # @return [Boolean] if the hash of the file matched the one provided (`true`)
+      #   or not (`false`).
       def check_hash(file, hash)
         if !hash.nil? && File.file?(file)
           computed_h = Digest::SHA256.file(file)

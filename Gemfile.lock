@@ -11,7 +11,6 @@ GEM
     ast (2.4.2)
     commonmarker (0.23.2)
     docopt (0.6.1)
-    github-markup (4.0.0)
     minitest (5.14.4)
     paint (2.2.1)
     parallel (1.21.0)
@@ -19,7 +18,6 @@ GEM
       ast (~> 2.4.1)
     rainbow (3.0.0)
     rake (13.0.6)
-    redcarpet (3.5.1)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rubocop (1.23.0)
@@ -36,7 +34,8 @@ GEM
     ruby-progressbar (1.11.0)
     unicode-display_width (2.1.0)
     webrick (1.7.0)
-    yard (0.9.26)
+    yard (0.9.27)
+      webrick (~> 1.7.0)
 
 PLATFORMS
   ruby
@@ -46,15 +45,12 @@ DEPENDENCIES
   bundler (>= 2.1.0, < 2.3)
   commonmarker (~> 0.21)
   docopt (~> 0.6)
-  github-markup (~> 4.0)
   minitest (~> 5.12)
   paint (~> 2.2)
   pass-station!
   rake (~> 13.0)
-  redcarpet (~> 3.5)
   rubocop (~> 1.23)
-  webrick (~> 1.7)
-  yard (~> 0.9)
+  yard (>= 0.9.27, < 0.10)
 
 BUNDLED WITH
    2.2.22
