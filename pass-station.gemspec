@@ -20,12 +20,13 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.metadata = {
-    'yard.run'          => 'yard',
-    'bug_tracker_uri'   => 'https://github.com/noraj/pass-station/issues',
-    'changelog_uri'     => 'https://github.com/noraj/pass-station/blob/master/docs/CHANGELOG.md',
-    'documentation_uri' => 'https://noraj.github.io/pass-station/yard/',
-    'homepage_uri'      => 'https://noraj.github.io/pass-station/',
-    'source_code_uri'   => 'https://github.com/noraj/pass-station/'
+    'yard.run'              => 'yard',
+    'bug_tracker_uri'       => 'https://github.com/noraj/pass-station/issues',
+    'changelog_uri'         => 'https://github.com/noraj/pass-station/blob/master/docs/CHANGELOG.md',
+    'documentation_uri'     => 'https://noraj.github.io/pass-station/yard/',
+    'homepage_uri'          => 'https://noraj.github.io/pass-station/',
+    'source_code_uri'       => 'https://github.com/noraj/pass-station/',
+    'rubygems_mfa_required' => 'true'
   }
 
   s.required_ruby_version = ['>= 2.6.0', '< 3.1']

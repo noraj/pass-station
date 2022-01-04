@@ -120,9 +120,7 @@ module PassStation
       # @param file_content [String] the content to write in the file
       # @return [String] destination file path
       def write_file(destination_file, file_content)
-        File.open(destination_file, 'wb') do |file|
-          file.write(file_content)
-        end
+        File.binwrite(destination_file, file_content)
         destination_file
       end
 

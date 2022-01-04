@@ -5,6 +5,9 @@
     - Move from Redcarpet to CommonMarker markdown provider
     - Move doc syntax from Rdoc to markdown
 
+- Chore:
+  - Linting: cleaner code
+
 ## [1.2.3]
 
 Credentials:
