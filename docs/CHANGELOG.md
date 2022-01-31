@@ -1,5 +1,7 @@
 ## [unreleased]
 
+## [1.3.0]
+
 - Dependencies:
   - Update to yard [v0.9.27](https://github.com/lsegal/yard/releases/tag/v0.9.27)
     - Move from Redcarpet to CommonMarker markdown provider
@@ -7,6 +9,7 @@
 
 - Chore:
   - Linting: cleaner code
+  - Add support for Ruby 3.1
 
 ## [1.2.3]
 
