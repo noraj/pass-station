@@ -1,4 +1,8 @@
-## [unreleased]
+## [1.4.0 - unreleased]
+
+Credentials:
+
+- Update database (new entries) to reflect upstream
 
 ## [1.3.0]
 
