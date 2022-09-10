@@ -5,7 +5,6 @@
 - Chore:
   - Update dependencies
 
-
 ## [1.3.0]
 
 - Dependencies:

@@ -5,7 +5,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/noraj/pass-station)](https://github.com/noraj/pass-station/network)
 [![GitHub stars](https://img.shields.io/github/stars/noraj/pass-station)](https://github.com/noraj/pass-station/stargazers)
 [![GitHub license](https://img.shields.io/github/license/noraj/pass-station)](https://github.com/noraj/pass-station/blob/master/LICENSE)
-[![Rawsec's CyberSecurity Inventory](https://inventory.rawsec.ml/img/badges/Rawsec-inventoried-FF5050_flat.svg)](https://inventory.rawsec.ml/tools.html#Pass%20Station)
+[![Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/img/badges/Rawsec-inventoried-FF5050_flat.svg)](https://inventory.raw.pm/tools.html#Pass%20Station)
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/pass-station.svg)](https://repology.org/project/pass-station/versions)
 
