@@ -1,8 +1,10 @@
-## [1.4.0 - unreleased]
+## [1.4.0]
 
-Credentials:
+- Credentials:
+  - Update database (new entries) to reflect upstream
+- Chore:
+  - Update dependencies
 
-- Update database (new entries) to reflect upstream
 
 ## [1.3.0]
 
