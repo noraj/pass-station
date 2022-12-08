@@ -67,15 +67,15 @@ begin
       end
     end
   elsif args['list']
-    db = args['--source'].nil? ? nil : args['--source'].to_i
+    db = args['--source']&.to_i
     ps = PassStation::DB.new(db)
     args['--sort'].nil? ? ps.parse : ps.parse(args['--sort'].to_sym)
     puts ps.output_list(args['--output'])
   elsif args['search']
-    db = args['--source'].nil? ? nil : args['--source'].to_i
+    db = args['--source']&.to_i
     ps = PassStation::DB.new(db)
     args['--sort'].nil? ? ps.parse : ps.parse(args['--sort'].to_sym)
-    field = args['--field'].nil? ? nil : args['--field'].to_sym
+    field = args['--field']&.to_sym
     ps.search(args['<term>'], field, sensitive: args['--sensitive'])
     output = ps.output_search(args['--output'])
     puts '[-] No result' if output.empty?
