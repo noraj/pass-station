@@ -41,4 +41,4 @@ Homepage / Documentation: https://noraj.github.io/pass-station/
 
 ## Author
 
-Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)).
+Made by Alexandre ZANNI ([@noraj](https://pwn.by/noraj/)). Forked from [sec-it/pass-station](https://github.com/sec-it/pass-station).
