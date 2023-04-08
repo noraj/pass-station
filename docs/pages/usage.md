@@ -4,7 +4,7 @@
 
 ```plaintext
 $ pass-station --help
-Pass Station v1.2.2
+Pass Station v1.4.0
 
 Usage:
   pass-station list [--sort <col> --output <format>] [--source <id> --debug]

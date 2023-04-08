@@ -26,6 +26,7 @@
 - CLI and library
 - Powerful search feature: fields, switches, regexp, highlight
 - Output: simple table, pretty table, JSON, YAML, CSV
+- 2 sources: [DefaultCreds-cheat-sheet](https://github.com/ihebski/DefaultCreds-cheat-sheet), [Many passwords](https://github.com/many-passwords/many-passwords)
 
 ## Installation
 
