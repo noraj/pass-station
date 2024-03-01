@@ -18,7 +18,7 @@ GEM
     parser (3.2.2.0)
       ast (~> 2.4.1)
     rainbow (3.1.1)
-    rake (13.0.6)
+    rake (13.1.0)
     regexp_parser (2.8.0)
     rexml (3.2.5)
     rubocop (1.50.2)
@@ -48,7 +48,7 @@ DEPENDENCIES
   minitest (~> 5.22)
   paint (~> 2.2)
   pass-station!
-  rake (~> 13.0)
+  rake (~> 13.1)
   rubocop (~> 1.50)
   yard (>= 0.9.27, < 0.10)
 
