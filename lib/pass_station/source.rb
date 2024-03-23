@@ -61,7 +61,7 @@ module PassStation
       # @return [Boolean] `true` if there is, `false` else.
       def check_for_update
         ret_vals = []
-        UPSTREAM_DATABASE[:MAPPING].each do |_k, v|
+        UPSTREAM_DATABASE[:MAPPING].each_value do |v|
           file = download_file(UPSTREAM_DATABASE[v][:URL], Dir.mktmpdir)
           # Same hash = no update
           ret_vals << !check_hash(file, UPSTREAM_DATABASE[v][:HASH])
