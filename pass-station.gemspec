@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     'documentation_uri'     => 'https://noraj.github.io/pass-station/yard/',
     'homepage_uri'          => 'https://noraj.github.io/pass-station/',
     'source_code_uri'       => 'https://github.com/noraj/pass-station/',
+    'funding_uri'           => 'https://github.com/sponsors/noraj',
     'rubygems_mfa_required' => 'true'
   }
 
