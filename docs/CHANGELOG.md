@@ -1,7 +1,8 @@
 ## [Unreleased]
 
 - Chore:
-  - Add support for Ruby 3.2
+  - Add support for Ruby 3.2 & 3.3
+  - Drop support for Ruby 2.6 & 2.7
 
 ## [1.4.0]
 
