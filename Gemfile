@@ -11,7 +11,7 @@ group :runtime, :cli do
 end
 
 group :development, :install do
-  gem 'bundler', ['>= 2.1.0', '< 2.4']
+  gem 'bundler', ['>= 2.1.0']
 end
 
 group :development, :test do
