@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :runtime, :cli do
+  gem 'csv', '~> 3.3' # for csv parsing
   gem 'docopt', '~> 0.6' # for argument parsing
   gem 'paint', '~> 2.2' # for colorized ouput
 end
