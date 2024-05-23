@@ -10,3 +10,5 @@ AllCops:
 Layout/HashAlignment:
   Exclude:
     - '*.gemspec'
+Style/SymbolProc:
+  Enabled: false
