@@ -15,7 +15,7 @@ module PassStation
       },
       DEFAULT_CREDENTIALS_CHEAT_SHEET: {
         URL: 'https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv',
-        HASH: 'f03f3ed77a8a932b1b2891fbec705d42b1eec4911fb76ccf36cde9e79a385556',
+        HASH: '6494a05090e14c438c9fa110f1566b3b7b9e2518bd0b8c42255f0dd3f7dff77b',
         FILENAME: 'DefaultCreds-Cheat-Sheet.csv',
         COLUMNS: {
           productvendor: 'Product/Vendor',
@@ -25,7 +25,7 @@ module PassStation
       },
       MANY_PASSWORDS: {
         URL: 'https://raw.githubusercontent.com/many-passwords/many-passwords/main/passwords.csv',
-        HASH: '293ce4411446c702aeda977b9a446ff42d045d980be0b5287a848b5bd7d39402',
+        HASH: '5eb85093f03dcc6a377fe7263e0629574088892dc283d5f53f93d1db80c7287a',
         FILENAME: 'many-passwords.csv',
         COLUMNS: {
           vendor: 'Vendor',
