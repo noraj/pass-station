@@ -8,11 +8,11 @@ gemspec
 group :runtime, :cli do
   gem 'csv', '~> 3.3' # for csv parsing
   gem 'docopt', '~> 0.6' # for argument parsing
-  gem 'paint', '~> 2.2' # for colorized ouput
+  gem 'paint', '~> 2.3' # for colorized ouput
 end
 
 group :development, :install do
-  gem 'bundler', ['>= 2.1.0']
+  gem 'bundler', ['>= 2.6.0']
 end
 
 group :development, :test do
@@ -25,6 +25,8 @@ group :development, :lint do
 end
 
 group :development, :docs do
-  gem 'commonmarker', '~> 0.23' # for markdown support in YARD
-  gem 'yard', ['>= 0.9.27', '< 0.10']
+  gem 'commonmarker', '~> 2.0' # for markdown support in YARD
+  # gem 'yard', ['>= 0.9.27', '< 0.10']
+  # https://github.com/lsegal/yard/issues/1528
+  gem 'yard', github: 'ParadoxV5/yard', ref: '9e869c940859570b07b81c5eadd6070e76f6291e', branch: 'commonmarker-1.0'
 end
