@@ -2,8 +2,8 @@
 
 ## Quick install
 
-```plaintext
-$ gem install pass-station
+```bash
+gem install pass-station
 ```
 
 See [Installation](/pages/install)

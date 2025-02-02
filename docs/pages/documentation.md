@@ -6,9 +6,9 @@ See [Usage](pages/usage.md?id=cli).
 
 ### Serve locally
 
-```plaintext
-$ npm i docsify-cli -g
-$ docsify serve docs
+```bash
+npm i docsify-cli -g
+docsify serve docs
 ```
 
 ## Library doc
@@ -23,14 +23,14 @@ You can consult it online [here](https://noraj.github.io/pass-station/yard/).
 
 For developers who only want to use the library.
 
-```plaintext
-$ bundle exec yard doc
+```bash
+bundle exec yard doc
 ```
 
 ### Building locally: for project developer
 
 For developers who want to participate to development of the project.
 
-```plaintext
-$ bundle exec yard doc --yardopts .yardopts-dev
+```bash
+bundle exec yard doc --yardopts .yardopts-dev
 ```

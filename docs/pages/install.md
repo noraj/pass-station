@@ -4,8 +4,8 @@
 
 ### Install from rubygems.org
 
-```plaintext
-$ gem install pass-station
+```bash
+gem install pass-station
 ```
 
 Gem: [pass-station](https://rubygems.org/gems/pass-station)
@@ -14,19 +14,11 @@ Gem: [pass-station](https://rubygems.org/gems/pass-station)
 
 From the repository:
 
-```plaintext
-# pacman -S pass-station
+```bash
+pacman -S pass-station
 ```
 
 PKGBUILD: [pass-station](https://github.com/BlackArch/blackarch/blob/master/packages/pass-station/PKGBUILD)
-
-### Install from Pentoo
-
-From the repository:
-
-```plaintext
-# emerge TODO/pass-station
-```
 
 ## Development
 
@@ -34,21 +26,21 @@ It's better to use [rbenv](https://github.com/rbenv/rbenv) or [asdf](https://git
 
 ### Install from rubygems.org
 
-```plaintext
-$ gem install --development pass-station
+```bash
+gem install --development pass-station
 ```
 
 ### Build from git
 
 Just replace `x.x.x` with the gem version you see after `gem build`.
 
-```plaintext
-$ git clone https://github.com/noraj/pass-station.git pass-station
-$ cd pass-station
-$ gem install bundler
-$ bundler install
-$ gem build pass-station.gemspec
-$ gem install pass-station-x.x.x.gem
+```bash
+git clone https://github.com/noraj/pass-station.git pass-station
+cd pass-station
+gem install bundler
+bundler install
+gem build pass-station.gemspec
+gem install pass-station-x.x.x.gem
 ```
 
 Note: if an automatic install is needed you can get the version with `$ gem build pass-station.gemspec | grep Version | cut -d' ' -f4`.
@@ -57,13 +49,13 @@ Note: if an automatic install is needed you can get the version with `$ gem buil
 
 From local file:
 
-```plaintext
-$ irb -Ilib -rpass_station
+```bash
+irb -Ilib -rpass_station
 ```
 
 Same for the CLI tool:
 
-```plaintext
-$ ruby -Ilib -rpass_station bin/pass-station
+```bash
+ruby -Ilib -rpass_station bin/pass-station
 ```
 
