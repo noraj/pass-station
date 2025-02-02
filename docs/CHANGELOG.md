@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+- Documentation:
+  - Add bash syntax highlight support
+  - Update docsify, docsify plugins
+  - Change of docsify theme
+  - Include version number in docsify scripts and themes as well as CDN url for easier update
 - Chore:
   - Change the way version is included. Insted of including a module `Version`, directly add the `VERSION` constant in the `PassStation` module. It could avoid namespace collision with that kind of generic name.
 
