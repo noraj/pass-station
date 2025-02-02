@@ -1,4 +1,4 @@
-## [Unreleased]
+## [2.0.0]
 
 - Credentials:
   - Update database (new entries) to reflect upstream
