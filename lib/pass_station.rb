@@ -10,9 +10,6 @@ require 'pass_station/version'
 
 # Pass Station module
 module PassStation
-  # Constants
-  include Version
-
   # Password database handling
   class DB
     # Get / set storage location, where will be stored the password database.

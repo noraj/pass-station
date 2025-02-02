@@ -1,3 +1,8 @@
+## [Unreleased]
+
+- Chore:
+  - Change the way version is included. Insted of including a module `Version`, directly add the `VERSION` constant in the `PassStation` module. It could avoid namespace collision with that kind of generic name.
+
 ## [2.0.0]
 
 - Credentials:

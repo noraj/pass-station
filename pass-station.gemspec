@@ -4,7 +4,7 @@ require_relative 'lib/pass_station/version'
 
 Gem::Specification.new do |s|
   s.name          = 'pass-station'
-  s.version       = Version::VERSION
+  s.version       = PassStation::VERSION
   s.platform      = Gem::Platform::RUBY
   s.summary       = 'CLI & library to search for default credentials among thousands of Products / Vendors'
   s.description   = 'CLI & library to search for default credentials among thousands of Products / Vendors'
