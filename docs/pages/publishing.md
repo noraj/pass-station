@@ -38,6 +38,8 @@ Don't forget to rebuild the library documentation to reflect, new code, new vers
 bundle exec yard doc
 ```
 
+Push git tag and publish gem on Rubygems.
+
 ```bash
 git tag -a vx.x.x
 git push --follow-tags
