@@ -39,6 +39,16 @@ doc = <<~DOCOPT
     --debug       Display arguments
     -h, --help    Show this screen
     --version     Show version
+
+  #{Paint['Examples:', '#2db453']}
+    pass-station search WEBLOGIC --field username --sensitive
+    pass-station search 'admin[0-9]+' --field all
+    pass-station list --sort username --output json
+
+  #{Paint['Project:', '#2db453']}
+    #{Paint['author', :underline]} (https://pwn.by/noraj / https://x.com/noraj_rawsec)
+    #{Paint['source', :underline]} (https://github.com/noraj/pass-station)
+    #{Paint['documentation', :underline]} (https://noraj.github.io/pass-station)
 DOCOPT
 
 begin

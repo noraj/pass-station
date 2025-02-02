@@ -4,6 +4,7 @@
   - Update database (new entries) to reflect upstream
 - Fanciness:
   - Colored help message
+  - Add examples and project links to help message
 - Chore:
   - Add support for Ruby 3.2, 3.3, 3.4
   - **Breaking change**: Drop support for Ruby 2.6, 2.7, 3.0
