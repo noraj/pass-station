@@ -10,60 +10,65 @@ PATH
   remote: .
   specs:
     pass-station (2.0.0)
+      csv (~> 3.3)
       docopt (~> 0.6)
       paint (~> 2.3)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.4.2)
-    commonmarker (2.0.4)
+    ast (2.4.3)
+    commonmarker (2.6.0)
       rb_sys (~> 0.9)
-    commonmarker (2.0.4-x86_64-linux)
-    csv (3.3.2)
+    csv (3.3.5)
     docopt (0.6.1)
-    json (2.9.1)
-    language_server-protocol (3.17.0.4)
-    minitest (5.25.4)
+    json (2.18.0)
+    language_server-protocol (3.17.0.5)
+    lint_roller (1.1.0)
+    minitest (6.0.1)
+      prism (~> 1.5)
     paint (2.3.0)
-    parallel (1.26.3)
-    parser (3.3.7.0)
+    parallel (1.27.0)
+    parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
+    prism (1.7.0)
     racc (1.8.1)
     rainbow (3.1.1)
-    rake (13.2.1)
-    rake-compiler-dock (1.9.1)
-    rb_sys (0.9.110)
-      rake-compiler-dock (= 1.9.1)
-    regexp_parser (2.10.0)
-    rubocop (1.71.1)
+    rake (13.3.1)
+    rake-compiler-dock (1.10.0)
+    rb_sys (0.9.123)
+      rake-compiler-dock (= 1.10.0)
+    regexp_parser (2.11.3)
+    rubocop (1.82.1)
       json (~> 2.3)
-      language_server-protocol (>= 3.17.0)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 2.9.3, < 3.0)
-      rubocop-ast (>= 1.38.0, < 2.0)
+      rubocop-ast (>= 1.48.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.38.0)
-      parser (>= 3.3.1.0)
+    rubocop-ast (1.49.0)
+      parser (>= 3.3.7.2)
+      prism (~> 1.7)
     ruby-progressbar (1.13.0)
-    unicode-display_width (3.1.4)
-      unicode-emoji (~> 4.0, >= 4.0.4)
-    unicode-emoji (4.0.4)
+    unicode-display_width (3.2.0)
+      unicode-emoji (~> 4.1)
+    unicode-emoji (4.2.0)
 
 PLATFORMS
   ruby
   x86_64-linux
 
 DEPENDENCIES
-  bundler (>= 2.6.0)
+  bundler (~> 4.0)
   commonmarker (~> 2.0)
   csv (~> 3.3)
   docopt (~> 0.6)
-  minitest (~> 5.25)
+  minitest (~> 6.0)
   paint (~> 2.3)
   pass-station!
   rake (~> 13.2)
@@ -71,4 +76,4 @@ DEPENDENCIES
   yard!
 
 BUNDLED WITH
-   2.6.3
+  4.0.3

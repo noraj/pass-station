@@ -7,6 +7,9 @@
   - Include version number in docsify scripts and themes as well as CDN url for easier update
 - Chore:
   - Change the way version is included. Insted of including a module `Version`, directly add the `VERSION` constant in the `PassStation` module. It could avoid namespace collision with that kind of generic name.
+  - Add support for Ruby 4.0
+  - **Breaking change**: Drop support for Ruby 3.1
+  - Update dependencies
 
 ## [2.0.0]
 
