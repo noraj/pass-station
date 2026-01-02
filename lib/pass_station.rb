@@ -44,7 +44,7 @@ module PassStation
     # @return [String] absolute filename of the DB
     def absolute_db_path
       pn = Pathname.new(__FILE__)
-      install_dir = pn.dirname.parent.to_s + Pathname::SEPARATOR_LIST
+      install_dir = pn.dirname.parent.to_s + File::SEPARATOR
       install_dir + @storage_location + @database_name
     end
 

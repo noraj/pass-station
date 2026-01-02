@@ -10,6 +10,8 @@
   - Add support for Ruby 4.0
   - **Breaking change**: Drop support for Ruby 3.1
   - Update dependencies
+- Fix:
+  - Fix error `private constant Pathname::SEPARATOR_LIST referenced (NameError)` by replacing `Pathname::SEPARATOR_LIST` with `File::SEPARATOR` as [the constant was made private](https://github.com/ruby/pathname/commit/60f5d58d73e3deea750f1579d2a94872b199c77f)
 
 ## [2.0.0]
 
