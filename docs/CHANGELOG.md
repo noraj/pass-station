@@ -1,5 +1,7 @@
-## [Unreleased]
+## [3.0.0]
 
+- Credentials:
+  - Update database (new entries) to reflect upstream
 - Documentation:
   - Add bash syntax highlight support
   - Update docsify, docsify plugins

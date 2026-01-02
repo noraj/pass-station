@@ -285,6 +285,8 @@ ASMAX,admin,epicrouter
 asmax (ssh),admin,admin
 asmax (ssh),support,support
 asmax (ssh),user,user
+ASMB10-iKVM,admin,admin
+ASMB10-iKVM (Yadro) BMC,Administrator,superuser
 Aspect,customer,<blank>
 Aspect,DTA,TJM
 ast,<blank>,<blank>
@@ -443,8 +445,9 @@ AWARD,<blank>,zjaaadc
 Axis,<blank>,<blank>
 Axis Communications,root,pass
 Axis,root,pass
-axis (web),root,admin
-axis (web),root,pass
+Axis (web),root,admin
+Axis (web),root,pass
+Axis (web),root,root
 AXUS,<blank>,0
 Axway,setup,setup
 Axway,system,System01
@@ -779,6 +782,7 @@ Dell iDRAC (web),root,calvin
 Dell,rapport,r@p8p0r+
 Dell,root,calvin
 Dell,root,wyse
+Dell Unisphere,admin,admin
 Dell,VNC,winterm
 Demarc,admin,my_DEMARC
 Deutsche Telekom,admin,<blank>
@@ -900,6 +904,7 @@ D-Link,<blank>,admin
 D-Link,<blank>,<blank>
 D-Link,<blank>,private
 D-Link,<blank>,public
+D-Link DIR300 (CVE-2024-41616),Alphanetworks,wrgg19_c_dlwbr_dir300
 D-Link DIR845L,Alphanetworks,wrgnd21_dlob.hans_dir845
 D-Link,D-Link,D-Link
 D-Link,dont need one,admin
@@ -1130,6 +1135,8 @@ GuardOne,n.a,guardone
 Guru,admin,admin
 GVC,Administrator,admin
 H2O Project,admin,admin
+H3C UniServer,admin,admin
+H3C UniServer,admin,h3capadmin
 haier,ucenik23,ucenik
 Haivision Makito X Decoder (web),admin,manager
 Hanwha,admin,<create by default>
@@ -1148,6 +1155,7 @@ Hewlett-Packard,ADVMAIL,HPOFFICE DATA
 Hewlett-Packard,Anonymous,<blank>
 Hewlett-Packard,<blank>,<blank>
 Hewlett-Packard,<blank>,hewlpack
+Hewlett Packard Enterprise BMC,admin,admin
 Hewlett-Packard,FIELD,<blank>
 Hewlett-Packard,FIELD,HPONLY
 Hewlett-Packard,FIELD,HPP187 SYS
@@ -1208,6 +1216,10 @@ Hewlett-Packard,PCUSER,SYS
 Hewlett-Packard,RSBCMON,SYS
 Hewlett-Packard,SPOOLMAN,HPOFFICE
 Hewlett-Packard,WP,HPOFFICE
+Hewlett Packard - Storage Management Utility (SMU) [<VE270P003/VL270P003] (WEB: View and change),manage,!manage
+Hewlett Packard - Storage Management Utility (SMU) [<VE270P003/VL270P003] (WEB: View only),monitor,!monitor
+Hewlett Packard - Storage Management Utility (SMU) [<VE270P003/VL270P003] (FTP),ftp,!ftp
+Hewlett Packard - Storage Management Utility (SMU) [>VE270P003/VL270P003] (WEB ),setup,<blank>
 HighPOint,RAID,hpt
 hikvision (ssh),admin,12345
 HipChat Server (ssh),admin,hipchat
@@ -1271,6 +1283,7 @@ i2b2 Workbench (mssql),I2b2metadata2,i2b2metadata2
 i2b2 Workbench (mssql),I2b2metadata,i2b2metadata
 i2b2 Workbench (mssql),I2b2workdata2,i2b2workdata2
 i2b2 Workbench (mssql),I2b2workdata,i2b2workdata
+Ibexa DXP,admin,publish
 iblitzz,admin,admin
 IBM,$ALOC$,<blank>
 IBM,$SRV,$SRV
@@ -1295,6 +1308,7 @@ IBM,<blank>,IBM
 IBM,<blank>,MBIU0
 IBM,<blank>,R1QTPS
 IBM,<blank>,sertafu
+iBMC 1288H,Administrator,Admin@9000
 IBM,CCC,<blank>
 IBM,CICSUSER,CISSUS
 IBM,CMSBATCH,<blank>
@@ -1495,8 +1509,6 @@ Inventel,admin,admin
 Inventel Wanadoo,Admin,Admin
 ion,Administrator,admin
 ion,<blank>,admin
-IP-cam 5 Mpix DA-IP8517TDV (analog DONGJIA DJ-IPC-HD8517TDV) (telnet),root,tl789
-IP-cam a5s66_imx322 (telnet),root,h2014071
 IP camera 5 Mpix DA-IP8517TDV (analog DONGJIA DJ-IPC-HD8517TDV) (telnet),root,tl789
 IP camera a5s66_imx322 (telnet),root,h2014071
 IP camera Hi3515 (telnet),root,xc3511
@@ -1509,16 +1521,6 @@ IP camera SMTSEC IMX185+Hi3516A_2Mp_1080p_H.265 (telnet),root,fxjvt1805
 IP camera VC-A20IPBLF1 (HI3516C_IMX322) (telnet),adminlvjh,adminlvjh123
 IP camera VC-A20IPBLF1 (HI3516C_IMX322) (telnet),root,HI1602014x
 IP camera ПМ-005-IP-E-COS24-25 (telnet),adminlvjh,adminlvjh123
-IP-cam Hi3515 (telnet),root,xc3511
-IP-cam Hi3516 sensor imx122 (telnet),root,cat1029
-IP-cam HI3516 (telnet),root,xmhdipc
-IP-cam Hi3518E (telnet),root,xmhdipc
-IP-cam NVR SunEyes (HD-Network Real-time) (telnet),root,antslq
-IP-cam (Remote MGMT) (telnet),root,jvbzd
-IP-cam SMTSEC IMX185+Hi3516A_2Mp_1080p_H.265 (telnet),root,fxjvt1805
-IP-cam VC-A20IPBLF1 (HI3516C_IMX322) (telnet),adminlvjh,adminlvjh123
-IP-cam VC-A20IPBLF1 (HI3516C_IMX322) (telnet),root,HI1602014x
-IP-cam ПМ-005-IP-E-COS24-25 (telnet),adminlvjh,adminlvjh123
 ipfire (ssh),admin,admin
 ipfire (ssh),admin,<blank>
 ipfire (ssh),root,admin
@@ -1612,6 +1614,7 @@ Kodak,RNIServiceManager,NetServer
 Kodak,SA,PASSWORD
 Kodak,Service,Service
 Kodi,kodi,kodi
+Kofax Business Connect,admin,admin
 Konica Minolta,admin,administrator
 Konica Minolta,<blank>,0
 Konica Minolta,<blank>,0000
@@ -1662,6 +1665,7 @@ Lantronix,login,access
 Lantronix,sysadmin,PASS
 Lasa AIMS (mssql),ADMIN,AIMS
 Lasa AIMS (mssql),FB,AIMS
+Laser Systems (www.lsystems.ru),admin,alkotest20
 latis network,<blank>,<blank>
 LAXO,admin,admin
 ldap account manager(lam),lam,lam
@@ -1702,6 +1706,7 @@ Liquidware Labs,ssadmin,sspassword
 LitmusChaos,admin,litmus
 Livingstone,root,<blank>
 Livingston,!root,<blank>
+LNL 3300 configuration manager,admin,password
 Lockdown,setup,changeme!
 LogiLink,admin,1234
 Logitech,<blank>,0
@@ -1864,6 +1869,9 @@ Motorola,setup,<blank>
 Motorola,technician,yZgO8Bvj
 movistar (ssh),1234,1234
 movistar (ssh),admin,admin
+Moxa,admin,moxa
+Moxa,<blank>,moxa
+Moxa (telnet) (CVE-2016-8717),94jo3dkru4,moxaiwroot
 MP3Mystic,admin,mp3mystic
 mro software,SYSADM,sysadm
 MRV,admin,admin
@@ -1899,10 +1907,13 @@ NEC,admin,password
 NEC,<blank>,<blank>
 NEC,<blank>,iPbSmNt
 Neo4j,neo4j,neo4j
+NEO Series (SnapHQ),guest,std001
+NEO Series (SnapHQ),admin,adm001
 Nessus,admin,admin123
 NetApp,admin,admin123
 NetApp,admin,NetCache
 NetApp ONTAP,admin,netapp!123
+NetApp ONTAP System Manager,admin,admin123
 Netasq,admin,admin
 NetBackup OpsCenter Analytics (web),admin,password
 NetBotz,netbotz,netbotz
@@ -1959,10 +1970,10 @@ NetXMS (mssql),admin,netxms
 NevisIDM,bootstrap,generated
 NewMedia-NET GmbH,root,admin
 Nexsan,ADMIN,PASSWORD
+Nexthink,nexthink,123456
 NeXT,me,<blank>
 NeXT,root,NeXT
 NeXT,signa,signa
-Nexthink,nexthink,123456
 Nexus Repository Manager (web),admin,admin123
 NGSec,admin,asd
 NGSec,admin,<blank>
@@ -2109,6 +2120,7 @@ NRG or RICOH,<blank>,password
 NSI,root,nsi
 Nullsoft,admin,changeme
 Nurit,$system,<blank>
+Nutanix,nutanix,4u
 Nuxeo Server (general),Administrator,Administrator
 OCE,<blank>,0 and the number of OCE printer
 OCS Inventory,admin,admin
@@ -2128,11 +2140,13 @@ OMRON,<blank>,<blank>
 Oncam (IP-cam),admin,admin
 Oncam (IP camera),admin,admin
 oodie.com,admin,admin
+OpenBMC,root,0penBmc
 OpenConnect,admin,OCS
 OpenConnect,adminstat,OCS
 OpenConnect,adminuser,OCS
 OpenConnect,adminview,OCS
 OpenConnect,helpdesk,OCS
+OpenEdge Explorer Tool,admin,admin
 Opengear,root,default
 OpenGTS (mssql),gts,opengts
 Openlink,admin,admin
@@ -2438,6 +2452,7 @@ Parrot,<blank>,0000
 patrowl,admin,Bonjour1!
 Patton,monitor,monitor
 Patton,superuser,superuser
+Payara server,admin,admin
 PBX,tech,nician
 Pelco DS Admin / DS ControlPoint,admin,admin
 Pelco DS Services,DSNVSUser,Pelco123
@@ -2555,7 +2570,6 @@ Prime,system,prime
 Prime,system,system
 Prime,tele,tele
 Prime,test,test
-productvendor,username,password
 Prolink,admin,password
 Proliphix Thermostat (iot),admin,admin
 Prolynx (Indoor Monitor),<blank>,002236
