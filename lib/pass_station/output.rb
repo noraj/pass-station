@@ -93,8 +93,8 @@ module PassStation
         # @param table [Array<CSV::Row>]
         # @return [Hash] keys are columns name, values are columns size
         def colsizes_count(table)
-          colsizes = table.first.to_h.keys.each_with_object({}) do |c, h|
-            h[c] = colsize_count(table, c)
+          colsizes = table.first.to_h.keys.to_h do |c|
+            [c, colsize_count(table, c)]
           end
           correct_min_colsizes(colsizes)
         end
