@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: ['4.0', '3.4', '3.3', '3.2']
+        ruby-version: ['4.0', '3.4', '3.3']
     env:
       BUNDLE_WITHOUT: docs development # https://bundler.io/v1.5/groups.html
     steps:
